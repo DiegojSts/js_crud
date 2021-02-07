@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Nome Completo</label> <br>
+                        <label class="validation-error hide" id="fullNameValidationError">Esse campo é obrigatório.</label>
+                        <input type="text" name="fullName" id="fullName">
+                  </div>
+                    <div>
+                        <label>Cargo</label> <br>
+                        <label class="validation-error hide" id="officeValidationError">Esse campo é obrigatório.</label>
+                        <input type="text" name="office" id="office" > 
+                    </div>
+
+                    <div>
+                        <label for="compnay">Empresa: </label> <br><br>
+                        <select id="company">
+                            <option> Selecione </option> 
+                            <option>ABC</option>
+                            <option>XYZ</option>
+                            <option>123</option>
+                        </select> <br><br>
+                        
+                    </div>
+
+                    <div>
+                        <label>Salário</label>
+                        <input type="text" name="salary" id="salary" >
+                  </div>
+                    <div>
+                        <label>Cidade</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list answer-align" id="employeeList">
+                    <h1>Dados dos Funcionários</h1>
+                    <thead> 
+                        <tr>
+                            <th>Nome</th>
+                            <th>Cargo</th>
+                            <th>Empresa</th>
+                            <th>Salário</th>
+                            <th>Cidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
